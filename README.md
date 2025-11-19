@@ -31,3 +31,19 @@ Note: to deactivate virtual environment:
 ```bash
 deactivate
 ```
+
+## Running Unit Tests
+
+To run the unit tests for this project, follow these steps:
+
+1. Ensure that the virtual environment is activated:
+   ```bash
+   source .venv/bin/activate
+   ```
+
+2. Run the tests using `pytest`:
+   ```bash
+   uv pytest
+   ```
+
+This will execute all the test cases located in the `tests` directory and display the results in the terminal.
