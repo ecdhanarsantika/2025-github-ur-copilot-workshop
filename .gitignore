@@ -13,3 +13,6 @@ __pycache__/
 # Coverage
 .coverage
 htmlcov/
+
+# Pomodoro app log file
+pomodoro_log.txt

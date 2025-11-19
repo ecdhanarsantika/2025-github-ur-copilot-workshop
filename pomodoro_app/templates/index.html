@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍅 Pomodoro Timer</h1>
+            <p class="subtitle">Stay focused, get things done</p>
+        </header>
+
+        <main>
+            <div class="timer-card">
+                <div class="session-info">
+                    <span id="session-type" class="session-type">Work Session</span>
+                    <span id="session-count" class="session-count">Session #1</span>
+                </div>
+
+                <div class="timer-display">
+                    <span id="timer">25:00</span>
+                </div>
+
+                <div class="timer-controls">
+                    <button id="start-btn" class="btn btn-primary">
+                        <span class="btn-icon">▶</span> Start
+                    </button>
+                    <button id="pause-btn" class="btn btn-secondary" disabled>
+                        <span class="btn-icon">⏸</span> Pause
+                    </button>
+                    <button id="reset-btn" class="btn btn-secondary">
+                        <span class="btn-icon">↻</span> Reset
+                    </button>
+                    <button id="skip-btn" class="btn btn-secondary">
+                        <span class="btn-icon">⏭</span> Skip
+                    </button>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progress" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="stats-card">
+                <h2>Today's Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value" id="completed-sessions">0</div>
+                        <div class="stat-label">Completed Sessions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="work-time">0</div>
+                        <div class="stat-label">Work Time (min)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="break-time">0</div>
+                        <div class="stat-label">Break Time (min)</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ using Flask & JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='timer.js') }}"></script>
+</body>
+</html>

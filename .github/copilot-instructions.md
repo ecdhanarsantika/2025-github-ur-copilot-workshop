@@ -13,3 +13,8 @@ For example, to install a package, use:
 ```bash
 uv pip install <package-name>
 ```
+
+**Instruction:**
+Before making any big changes to the project, always check the architecture documentation in `architecture.md` to ensure alignment with the overall design and goals.
+
+Use command prompt instead of powershell for Windows users when executing commands in the terminal.
