@@ -43,7 +43,7 @@ To run the unit tests for this project, follow these steps:
 
 2. Run the tests using `pytest`:
    ```bash
-   uv pytest
+   uv run pytest
    ```
 
 This will execute all the test cases located in the `tests` directory and display the results in the terminal.
