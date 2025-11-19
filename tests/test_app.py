@@ -5,7 +5,8 @@ from pomodoro_app.app import (
     format_log_entry,
     append_log_entry,
     parse_log_file,
-    aggregate_statistics
+    aggregate_statistics,
+    LOG_FILE
 )
 
 def test_validate_session_data():
@@ -40,7 +41,7 @@ def test_append_log_entry():
     }
     with patch("builtins.open", mock_open()) as mocked_file:
         assert append_log_entry(data) is True
-        mocked_file.assert_called_once_with('pomodoro_log.txt', 'a', encoding='utf-8')
+        mocked_file.assert_called_once_with(LOG_FILE, 'a', encoding='utf-8')
 
 def test_parse_log_file():
     mock_log_content = '{"session_type": "work", "action": "started", "timestamp": "2025-11-19T12:00:00Z"}\n'
