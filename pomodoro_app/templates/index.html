@@ -21,7 +21,28 @@
                 </div>
 
                 <div class="timer-display">
-                    <span id="timer">25:00</span>
+                    <svg class="circular-progress" viewBox="0 0 200 200">
+                        <defs>
+                            <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" id="gradient-start" style="stop-color:#3498db;stop-opacity:1" />
+                                <stop offset="100%" id="gradient-end" style="stop-color:#3498db;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle class="progress-bg" cx="100" cy="100" r="90" />
+                        <circle 
+                            id="progress-circle" 
+                            class="progress-ring" 
+                            cx="100" 
+                            cy="100" 
+                            r="90" 
+                            stroke="url(#progress-gradient)"
+                        />
+                    </svg>
+                    <div class="timer-content">
+                        <span id="timer">25:00</span>
+                        <span id="timer-status" class="timer-status">Ready to start</span>
+                    </div>
+                    <canvas id="particles-canvas" class="particles-canvas"></canvas>
                 </div>
 
                 <div class="timer-controls">
@@ -39,9 +60,7 @@
                     </button>
                 </div>
 
-                <div class="progress-bar">
-                    <div id="progress" class="progress-fill"></div>
-                </div>
+
             </div>
 
             <div class="stats-card">
